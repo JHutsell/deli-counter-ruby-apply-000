@@ -29,4 +29,21 @@ def now_serving(deli_line)
   end
 end
 
+# def take_a_number(deli_line, name)
+#   deli_line.push(name)
+#   puts "Welcome, #{name}. You are number #{deli_line.length} in line."
+#   #accounts for 0th position in line becasue length is always 1 more than final index
+# end
+
+$ticket_number = 47
+
+def add_customer(deli_line)
+  customer_number = $ticket_number + 1
+  $ticket_number = customer_number
+  deli_line.push(customer_number)
+  puts "Welcome, your ticket number is #{customer_number}. You are number #{deli_line.length} in line."
+end
+
+
+
 
